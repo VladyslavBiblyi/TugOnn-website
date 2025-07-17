@@ -108,16 +108,29 @@
       margin: 0 auto;
       display: block;
     }
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 700px;
+      border: none;
+      margin-top: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 14px;
+      color: #888;
+    }
     input, textarea {
       width: 100%;
       padding: 12px;
-      margin-top: 4px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
+@@ -133,14 +118,26 @@
       font-size: 16px;
       font-family: inherit;
     }
+    
     label {
       font-weight: 600;
       margin-bottom: 4px;
@@ -129,56 +142,10 @@
       text-align: left;
       margin-bottom: 20px;
     }
-
     .checkbox-group label {
-      position: relative;
-      padding-left: 32px;
-      margin-bottom: 12px;
       display: block;
-      cursor: pointer;
       font-weight: normal;
-      color: #333;
-      line-height: 1.6;
     }
-
-    .checkbox-group input[type="checkbox"] {
-      opacity: 0;
-      position: absolute;
-      height: 0;
-      width: 0;
-      cursor: pointer;
-    }
-
-    .checkbox-group label::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 3px;
-      width: 20px;
-      height: 20px;
-      background-color: white;
-      border: 2px solid #ccc;
-      border-radius: 6px;
-      transition: all 0.2s ease;
-    }
-
-    .checkbox-group input[type="checkbox"]:checked + label::before {
-      background-color: #4caf50;
-      border-color: #4caf50;
-    }
-
-    .checkbox-group input[type="checkbox"]:checked + label::after {
-      content: "";
-      position: absolute;
-      left: 6px;
-      top: 9px;
-      width: 6px;
-      height: 12px;
-      border: solid white;
-      border-width: 0 2px 2px 0;
-      transform: rotate(45deg);
-    }
-
     footer {
       text-align: center;
       padding: 40px;
@@ -188,62 +155,38 @@
   </style>
 </head>
 <body>
-  <nav>
-    <img src="56665a70-fec0-45e4-8e10-313c02fcc6ce.png" alt="TugOnn Logo">
-    <div>
-      <a href="#about">About</a>
-      <a href="#impact">Impact</a>
-      <a href="#join">Join</a>
-    </div>
-  </nav>
-
-  <header>
-    <h1>Build What Matters</h1>
-    <p>TugOnn is a global student initiative where action beats talk, and real-world good earns real-world recognition.</p>
-    <a href="#join"><button class="hero-btn">Join the Team</button></a>
-  </header>
-
-  <section id="about">
-    <h2>Why TugOnn?</h2>
-    <p>We're tired of empty likes and passive platforms. TugOnn is built for students who want to turn creativity and kindness into actual progress.</p>
-    <div class="cards">
-      <div class="card">
-        <h3>🎯 Purpose-Driven</h3>
-        <p>Everything you do on TugOnn builds your profile and creates opportunity.</p>
-      </div>
-      <div class="card">
-        <h3>🌍 Global, Local</h3>
-        <p>Launch in your campus. Lead your region. Grow with the world.</p>
-      </div>
-      <div class="card">
-        <h3>🚀 Built By You</h3>
-        <p>We’re looking for core builders to join the team now — before it takes off.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="modules">
-    <img src="ed93cf7e-e760-44b1-b259-61513cf6f5ec.png" alt="Platform Modules">
-  </section>
-
-  <section id="impact">
-    <h2>Make Real Impact</h2>
-    <p>From good deeds to creative challenges, TugOnn connects what matters to people who care. It's a mission, not a feed.</p>
+@@ -188,29 +185,34 @@
   </section>
 
   <section id="join">
+  <h2>Apply to Join TugOnn</h2>
+  <p>We’re building our first international team. Want to be part of it?</p>
+  
+  <form action="https://formspree.io/f/mpwlzeej" method="POST" style="max-width:600px; margin:0 auto; text-align:left;">
+    <label for="name">Full Name</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="_replyto" required><br><br>
     <h2>Apply to Join TugOnn</h2>
     <p>We’re building our first international team. Want to be part of it?</p>
-    <form action="https://formspree.io/f/mpwlzeej" method="POST" style="max-width:600px; margin:0 auto; text-align:left;">
+    <form action="https://formspree.io/f/your-form-id" method="POST" style="max-width:600px; margin:0 auto; text-align:left;">
       <label for="name">Full Name</label><br>
       <input type="text" id="name" name="name" required><br><br>
 
+    <label for="reason">Your Why?</label><br>
+    <textarea id="reason" name="reason" rows="4" required></textarea><br><br>
       <label for="email">Email</label><br>
       <input type="email" id="email" name="_replyto" required><br><br>
 
+    <label for="role">How do you want to contribute?</label><br>
+    <input type="text" id="role" name="role"><br><br>
       <label for="reason">Why do you want to join TugOnn?</label><br>
       <textarea id="reason" name="reason" rows="4" required></textarea><br><br>
 
+    <button type="submit" class="hero-btn">Submit Application</button>
+  </form>
+</section>
       <label>What role do you want to help with?</label>
       <div class="checkbox-group">
         <label><input type="checkbox" name="roles" value="IT/Programming"> IT / Programming</label>
