@@ -170,10 +170,25 @@
   </section>
 
   <section id="join">
-    <h2>Apply to Join TugOnn</h2>
-    <p>We're building our first international team. Want to be part of it?</p>
-    <iframe src="https://forms.gle/8odMUfFRy9McJiQa8">Loading…</iframe>
-  </section>
+  <h2>Apply to Join TugOnn</h2>
+  <p>We’re building our first international team. Want to be part of it?</p>
+  
+  <form action="https://formspree.io/f/mpwlzeej" method="POST" style="max-width:600px; margin:0 auto; text-align:left;">
+    <label for="name">Full Name</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="_replyto" required><br><br>
+
+    <label for="reason">Your Why?</label><br>
+    <textarea id="reason" name="reason" rows="4" required></textarea><br><br>
+
+    <label for="role">How do you want to contribute?</label><br>
+    <input type="text" id="role" name="role"><br><br>
+
+    <button type="submit" class="hero-btn">Submit Application</button>
+  </form>
+</section>
 
   <footer>
     <img src="e4d0e317-d6ab-4579-8e87-b5071bef9cf6.png" alt="TugOnn Footer Logo" style="max-height:80px; margin-bottom:10px;"><br>
