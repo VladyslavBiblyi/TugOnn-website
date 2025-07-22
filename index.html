@@ -76,6 +76,38 @@
       color: #555;
       margin-bottom: 20px;
     }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+      width: 280px;
+    }
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .card p {
+      font-size: 15px;
+      color: #666;
+    }
+    .modules {
+      margin-top: 50px;
+    }
+    .modules img {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      display: block;
+    }
     iframe {
       width: 100%;
       max-width: 600px;
@@ -91,31 +123,85 @@
       font-size: 14px;
       color: #888;
     }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+@@ -133,14 +118,26 @@
+      font-size: 16px;
+      font-family: inherit;
+    }
+    
+    label {
+      font-weight: 600;
+      margin-bottom: 4px;
+      display: inline-block;
+      color: #333;
+    }
+
+    .checkbox-group {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    .checkbox-group label {
+      display: block;
+      font-weight: normal;
+    }
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 14px;
+      color: #888;
+    }
   </style>
 </head>
 <body>
-  <nav>
-    <img src="TugOnn-website/5474230720252737440.jpg" alt="TugOnn Logo">
-    <a href="#apply">Apply</a>
-  </nav>
+@@ -188,29 +185,34 @@
+  </section>
 
-  <header>
-    <video autoplay muted loop playsinline style="width: 100%; max-width: 600px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 40px;">
-      <source src="TugOnn-website/video5474656724717696490.mp4" type="video/mp4">
-    </video>
-    <h1>Be the First to Create Something That Matters</h1>
-    <p>Join TugOnn – a new kind of social platform where actions speak louder than likes.</p>
-    <button class="hero-btn" onclick="document.getElementById('apply').scrollIntoView({ behavior: 'smooth' })">Join the Core of TugOnn</button>
-  </header>
-
-  <section>
+  <section id="join">
+  <h2>Apply to Join TugOnn</h2>
+  <p>We’re building our first international team. Want to be part of it?</p>
+  
+  <form action="https://formspree.io/f/mpwlzeej" method="POST" style="max-width:600px; margin:0 auto; text-align:left;">
+    <label for="name">Full Name</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="_replyto" required><br><br>
     <h2>Apply to Join TugOnn</h2>
     <p>We’re building our first international team. Want to be part of it?</p>
-    <iframe src="https://forms.gle/ahFrmitQ7aAUHW4Y6" loading="lazy">Loading…</iframe>
+    <form action="https://formspree.io/f/your-form-id" method="POST" style="max-width:600px; margin:0 auto; text-align:left;">
+      <label for="name">Full Name</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+    <label for="reason">Your Why?</label><br>
+    <textarea id="reason" name="reason" rows="4" required></textarea><br><br>
+      <label for="email">Email</label><br>
+      <input type="email" id="email" name="_replyto" required><br><br>
+
+    <label for="role">How do you want to contribute?</label><br>
+    <input type="text" id="role" name="role"><br><br>
+      <label for="reason">Why do you want to join TugOnn?</label><br>
+      <textarea id="reason" name="reason" rows="4" required></textarea><br><br>
+
+    <button type="submit" class="hero-btn">Submit Application</button>
+  </form>
+</section>
+      <label>What role do you want to help with?</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="roles" value="IT/Programming"> IT / Programming</label>
+        <label><input type="checkbox" name="roles" value="Design (UI/UX)"> Design (UI/UX)</label>
+        <label><input type="checkbox" name="roles" value="Marketing / Communication"> Marketing / Communication</label>
+        <label><input type="checkbox" name="roles" value="Project Management"> Project Management</label>
+        <label><input type="checkbox" name="roles" value="Other"> Other</label>
+      </div>
+
+      <button type="submit" class="hero-btn">Submit Application</button>
+    </form>
   </section>
 
   <footer>
-    <img src="TugOnn-website/5474230720252737440.jpg" alt="TugOnn Footer Logo" style="max-height:80px; margin-bottom:10px;"><br>
+    <img src="e4d0e317-d6ab-4579-8e87-b5071bef9cf6.png" alt="TugOnn Footer Logo" style="max-height:80px; margin-bottom:10px;"><br>
     © 2025 TugOnn — The World’s Campus. Open.
   </footer>
 </body>
