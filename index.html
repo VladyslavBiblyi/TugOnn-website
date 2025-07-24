@@ -3,206 +3,159 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TugOnn – Build What Matters</title>
+  <title>TugOnn – The World’s Campus. Open.</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-    html {
-      scroll-padding-top: 80px;
-    }
     body {
+      margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #f0f4f8;
+      background-color: #ffffff;
       color: #1f1f1f;
     }
-    nav {
-      background: #fff;
-      padding: 16px 40px;
+    header {
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      background-color: #f0f4ff;
     }
-    nav img {
-      height: 40px;
-    }
-    nav a {
-      margin-left: 30px;
-      text-decoration: none;
-      color: #4caf50;
-      font-weight: 600;
-    }
-    header {
+    .hero {
+      padding: 100px 20px;
       text-align: center;
-      padding: 80px 20px 40px;
-      background: linear-gradient(135deg, #ffffff, #e6f4ee);
-    }
-    header h1 {
-      font-size: 40px;
-      color: #2c3e50;
-    }
-    header p {
-      font-size: 20px;
-      color: #34495e;
-      max-width: 600px;
-      margin: 20px auto 0;
-    }
-    .hero-btn {
-      margin-top: 30px;
-      padding: 14px 28px;
-      background: #4caf50;
+      background: linear-gradient(135deg, #86b7f5, #7f84ff);
       color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
     }
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: 0 auto;
+    .hero h1 {
+      font-size: 56px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 22px;
+      max-width: 700px;
+      margin: 0 auto 40px auto;
+    }
+    .btn {
+      background-color: white;
+      color: #4f46e5;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .section {
+      padding: 80px 20px;
       text-align: center;
     }
-    section h2 {
-      font-size: 28px;
-      color: #2c3e50;
-      margin-bottom: 20px;
-    }
-    section p {
-      font-size: 17px;
-      color: #555;
-      margin-bottom: 20px;
-    }
-    .cards {
+    .features, .values, .modules {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
+      gap: 40px;
       margin-top: 40px;
     }
     .card {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
-      width: 280px;
+      width: 260px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
     .card h3 {
-      font-size: 20px;
       margin-bottom: 10px;
-      color: #333;
+      color: #4f46e5;
     }
     .card p {
-      font-size: 15px;
-      color: #666;
-    }
-    .modules {
-      margin-top: 50px;
-    }
-    .modules img {
-      width: 100%;
-      max-width: 400px;
-      margin: 0 auto;
-      display: block;
-    }
-    iframe {
-      width: 100%;
-      max-width: 600px;
-      height: 700px;
-      border: none;
-      margin-top: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    footer {
-      text-align: center;
-      padding: 40px;
       font-size: 14px;
-      color: #888;
+      color: #444;
     }
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-@@ -133,14 +118,26 @@
-      font-size: 16px;
-      font-family: inherit;
-    }
-    
-    label {
-      font-weight: 600;
-      margin-bottom: 4px;
-      display: inline-block;
-      color: #333;
-    }
-
-    .checkbox-group {
-      text-align: left;
-      margin-bottom: 20px;
-    }
-    .checkbox-group label {
-      display: block;
-      font-weight: normal;
-    }
-    footer {
+    .footer {
       text-align: center;
-      padding: 40px;
+      padding: 30px;
       font-size: 14px;
-      color: #888;
+      background-color: #f0f0f0;
+      color: #777;
     }
   </style>
 </head>
 <body>
-@@ -188,29 +185,34 @@
+  <header>
+    <div style="font-weight: 800; font-size: 24px;">TugOnn</div>
+    <nav>
+      <a href="#mission" style="margin-right: 20px; text-decoration: none; color: #1f1f1f;">Mission</a>
+      <a href="#modules" style="margin-right: 20px; text-decoration: none; color: #1f1f1f;">Modules</a>
+      <a href="#ambassadors" style="margin-right: 20px; text-decoration: none; color: #1f1f1f;">Ambassadors</a>
+      <a href="#join" style="text-decoration: none; color: #1f1f1f;">Join</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>The World’s Campus. Open.</h1>
+    <p>TugOnn connects students, creators, and communities through challenges, talent showcases, good deeds, and a real-time social wall — all designed to build impact, not vanity.</p>
+    <a href="#join" class="btn">Apply to Join the Team</a>
   </section>
 
-  <section id="join">
-  <h2>Apply to Join TugOnn</h2>
-  <p>We’re building our first international team. Want to be part of it?</p>
-  
-  <form action="https://formspree.io/f/mpwlzeej" method="POST" style="max-width:600px; margin:0 auto; text-align:left;">
-    <label for="name">Full Name</label><br>
-    <input type="text" id="name" name="name" required><br><br>
-    
-    <label for="email">Email</label><br>
-    <input type="email" id="email" name="_replyto" required><br><br>
-    <h2>Apply to Join TugOnn</h2>
-    <p>We’re building our first international team. Want to be part of it?</p>
-    <form action="https://formspree.io/f/your-form-id" method="POST" style="max-width:600px; margin:0 auto; text-align:left;">
-      <label for="name">Full Name</label><br>
-      <input type="text" id="name" name="name" required><br><br>
+  <section id="mission" class="section">
+    <h2>Our Mission</h2>
+    <p>TugOnn empowers students globally to connect with each other, showcase talents, offer services, and inspire positive action — creating a trusted, collaborative platform driven by value and purpose.</p>
+  </section>
 
-    <label for="reason">Your Why?</label><br>
-    <textarea id="reason" name="reason" rows="4" required></textarea><br><br>
-      <label for="email">Email</label><br>
-      <input type="email" id="email" name="_replyto" required><br><br>
-
-    <label for="role">How do you want to contribute?</label><br>
-    <input type="text" id="role" name="role"><br><br>
-      <label for="reason">Why do you want to join TugOnn?</label><br>
-      <textarea id="reason" name="reason" rows="4" required></textarea><br><br>
-
-    <button type="submit" class="hero-btn">Submit Application</button>
-  </form>
-</section>
-      <label>What role do you want to help with?</label>
-      <div class="checkbox-group">
-        <label><input type="checkbox" name="roles" value="IT/Programming"> IT / Programming</label>
-        <label><input type="checkbox" name="roles" value="Design (UI/UX)"> Design (UI/UX)</label>
-        <label><input type="checkbox" name="roles" value="Marketing / Communication"> Marketing / Communication</label>
-        <label><input type="checkbox" name="roles" value="Project Management"> Project Management</label>
-        <label><input type="checkbox" name="roles" value="Other"> Other</label>
+  <section id="modules" class="section">
+    <h2>Core Modules</h2>
+    <div class="modules">
+      <div class="card">
+        <h3>🎯 Challenges</h3>
+        <p>Community-driven weekly tasks to boost creativity, motivation, and purpose — like hosting events, starting initiatives, or completing goals.</p>
       </div>
-
-      <button type="submit" class="hero-btn">Submit Application</button>
-    </form>
+      <div class="card">
+        <h3>🌟 Talent</h3>
+        <p>Showcase your skills and gain recognition — from coding and design to art, music, or sports.</p>
+      </div>
+      <div class="card">
+        <h3>🤝 Good Deeds</h3>
+        <p>Earn points and impact by helping people nearby — tutoring, tech help, campus chores, etc.</p>
+      </div>
+      <div class="card">
+        <h3>🧩 Social Wall</h3>
+        <p>Share posts, progress, and positive action — TugOnn’s live feed is about growth, not just followers.</p>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <img src="e4d0e317-d6ab-4579-8e87-b5071bef9cf6.png" alt="TugOnn Footer Logo" style="max-height:80px; margin-bottom:10px;"><br>
-    © 2025 TugOnn — The World’s Campus. Open.
+  <section class="section">
+    <h2>Our Values</h2>
+    <div class="values">
+      <div class="card">
+        <h3>🛡️ Trust & Safety</h3>
+        <p>Users are verified through schools or referrals. Rating systems keep the platform reliable and respectful.</p>
+      </div>
+      <div class="card">
+        <h3>💸 Shared Revenue</h3>
+        <p>Ad income is fairly split among contributors, top users, and regional leaders. We grow together.</p>
+      </div>
+      <div class="card">
+        <h3>🌍 Impact First</h3>
+        <p>We reward value, not vanity. Helping someone earns more than going viral.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ambassadors" class="section">
+    <h2>Ambassador Program</h2>
+    <p>We’re launching with a small team of ambitious students across U.S. campuses who will shape the platform, test early features, and grow with us. Ambassadors will get exclusive rewards, team access, and early revenue share.</p>
+    <a href="#join" class="btn">Become an Ambassador</a>
+  </section>
+
+  <section id="join" class="section" style="background-color: #f8f8f8;">
+    <h2>Join the Movement</h2>
+    <p>Apply to become part of the founding team or early user group. Your feedback, ideas, and passion will shape TugOnn's future.</p>
+    <a href="#" class="btn">Apply Now</a>
+  </section>
+
+  <footer class="footer">
+    © 2025 TugOnn — Built for students, by students.
   </footer>
 </body>
 </html>
