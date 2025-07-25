@@ -10,7 +10,7 @@
     html { scroll-padding-top: 80px; }
     body {
       font-family: 'Inter', sans-serif;
-      background: radial-gradient(circle at top left, #e0f7fa, #f0f4f8);
+      background: linear-gradient(to bottom right, #fceabb, #f8b500);
       color: #1f1f1f;
     }
     nav {
@@ -19,7 +19,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 10;
@@ -34,32 +34,32 @@
     nav a {
       margin-left: 30px;
       text-decoration: none;
-      color: #2e7d32;
+      color: #ff6f00;
       font-weight: 600;
       transition: color 0.3s;
     }
     nav a:hover {
-      color: #66bb6a;
+      color: #ff9800;
     }
     header {
       text-align: center;
       padding: 100px 20px 60px;
-      background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
-      color: white;
+      background: radial-gradient(circle at center, #ffe082, #ffca28);
+      color: #2e2e2e;
     }
     header h1 {
-      font-size: 48px;
+      font-size: 52px;
       animation: fadeInDown 1s ease-out;
     }
     header p {
-      font-size: 20px;
+      font-size: 22px;
       max-width: 700px;
       margin: 20px auto 0;
     }
     .hero-btn {
       margin-top: 30px;
       padding: 14px 28px;
-      background: #4caf50;
+      background: #ff9800;
       color: white;
       border: none;
       border-radius: 12px;
@@ -69,7 +69,7 @@
       transition: background 0.3s;
     }
     .hero-btn:hover {
-      background: #43a047;
+      background: #fb8c00;
     }
     section {
       padding: 80px 20px;
@@ -78,13 +78,13 @@
       text-align: center;
     }
     section h2 {
-      font-size: 32px;
-      color: #2c3e50;
+      font-size: 34px;
+      color: #3e2723;
       margin-bottom: 20px;
     }
     section p {
       font-size: 18px;
-      color: #555;
+      color: #5d4037;
       margin-bottom: 30px;
     }
     .cards {
@@ -94,10 +94,10 @@
       gap: 30px;
     }
     .card {
-      background: white;
+      background: #fff3e0;
       padding: 30px;
       border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
       width: 280px;
       transition: transform 0.3s ease;
     }
@@ -107,17 +107,11 @@
     .card h3 {
       font-size: 22px;
       margin-bottom: 10px;
-      color: #333;
+      color: #bf360c;
     }
     .card p {
       font-size: 16px;
-      color: #666;
-    }
-    .modules img {
-      width: 100%;
-      max-width: 500px;
-      margin: 0 auto;
-      display: block;
+      color: #6d4c41;
     }
     .checkbox-group {
       margin-top: 20px;
@@ -149,8 +143,8 @@
       text-align: center;
       padding: 60px 20px;
       font-size: 14px;
-      color: #888;
-      background: #1a1a1a;
+      color: #fff3e0;
+      background: #3e2723;
     }
     footer img {
       max-height: 80px;
@@ -213,7 +207,7 @@
       <label for="email">Email</label>
       <input type="email" id="email" name="_replyto" required>
 
-      <label for="reason">Why do you want to join TugOnn?</label>
+      <label for="reason">Your Why?</label>
       <textarea id="reason" name="reason" rows="4" required></textarea>
 
       <label>What role do you want to help with?</label>
